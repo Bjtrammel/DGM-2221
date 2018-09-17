@@ -943,7 +943,7 @@ Transform:
   m_Children:
   - {fileID: 908913804}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &70594711
 Rigidbody:
@@ -1767,6 +1767,8 @@ GameObject:
   - component: {fileID: 140359572}
   - component: {fileID: 140359571}
   - component: {fileID: 140359570}
+  - component: {fileID: 140359573}
+  - component: {fileID: 140359574}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1781,19 +1783,37 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 140359568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 59, y: 31.25, z: -20.75}
+  m_LocalPosition: {x: 56.75, y: 30.25, z: -18.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &140359570
-AudioListener:
+--- !u!1773428102 &140359570
+ParentConstraint:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 140359568}
   m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 56.75, y: 30.25, z: -18.25}
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffsets:
+  - {x: 0, y: 0, z: -4.5}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 0
+  m_AffectTranslationY: 0
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 70594710}
+    weight: 1
 --- !u!124 &140359571
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1837,6 +1857,42 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1818360609 &140359573
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 140359568}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 140359569}
+    weight: 1
+--- !u!1818360608 &140359574
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 140359568}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 56.75, y: 30.25, z: -18.25}
+  m_TranslationOffset: {x: 0, y: 0, z: -4.5}
+  m_AffectTranslationX: 0
+  m_AffectTranslationY: 0
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 70594710}
+    weight: 1
 --- !u!1 &151146975
 GameObject:
   m_ObjectHideFlags: 0
@@ -21266,7 +21322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e5d707c1a4f85b244a4e081c6309075d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e5d707c1a4f85b244a4e081c6309075d, type: 3}
       propertyPath: m_LocalScale.x
