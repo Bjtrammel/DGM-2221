@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"RunSpeed","value":{"$content":20.0,"$type":"System.Single"},"$version":"A"},{"name":"WalkSpeed","value":{"$content":2.5,"$type":"System.Single"},"$version":"A"},{"name":"Jump","value":{"$content":6.0,"$type":"System.Single"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"RunSpeed","value":{"$content":20.0,"$type":"System.Single"},"$version":"A"},{"name":"WalkSpeed","value":{"$content":2.5,"$type":"System.Single"},"$version":"A"},{"name":"Jump","value":{"$content":6.0,"$type":"System.Single"},"$version":"A"},{"name":"BulletSpeed","value":{"$content":"Left","$type":"UnityEngine.EventSystems.MoveDirection"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!136 &70594707
 CapsuleCollider:
@@ -229,6 +229,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 908913804}
+  - {fileID: 1835626730}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -482,7 +483,7 @@ GameObject:
   - component: {fileID: 201171172}
   - component: {fileID: 201171170}
   - component: {fileID: 201171169}
-  - component: {fileID: 201171176}
+  - component: {fileID: 201171171}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -498,13 +499,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 201171168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Script: {fileID: -1999370065, guid: dcd2196c4e9166f499793f2007fcda35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: e67c3f613300c6648b3b1d2f3b682d48, type: 2}
+    - {fileID: 11400000, guid: 2d07285fa289cce478fef5d0bbdab8d8, type: 2}
 --- !u!114 &201171170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +520,18 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!135 &201171171
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201171168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.24
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &201171172
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -575,21 +588,6 @@ Transform:
   m_Father: {fileID: 1329253169}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &201171176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 201171168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1999370065, guid: dcd2196c4e9166f499793f2007fcda35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 2d07285fa289cce478fef5d0bbdab8d8, type: 2}
 --- !u!1 &384962515
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +671,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -808,6 +806,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &683703359
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 70594710}
+    m_Modifications:
+    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316005249978142, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+      propertyPath: m_Name
+      value: Gun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &872606237
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +866,7 @@ GameObject:
   m_Layer: 0
   m_Name: Plane (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1222,7 +1266,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1217137723
 MeshRenderer:
@@ -1280,7 +1324,7 @@ GameObject:
   m_Layer: 0
   m_Name: Check Point (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1347,10 +1391,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1329253169}
   - component: {fileID: 1329253170}
+  - component: {fileID: 1329253172}
   m_Layer: 0
   m_Name: Goomba
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1380,6 +1425,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1329253172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1329253168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!4 &1835626730 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904,
+    type: 2}
+  m_PrefabInternal: {fileID: 683703359}
 --- !u!1 &1959715761
 GameObject:
   m_ObjectHideFlags: 0
