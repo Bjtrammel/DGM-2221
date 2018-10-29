@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 70594711}
   m_Layer: 0
   m_Name: Mario
-  m_TagString: Mario
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: 201171170}
   - component: {fileID: 201171169}
   - component: {fileID: 201171171}
+  - component: {fileID: 201171175}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Enemy
@@ -587,6 +588,18 @@ Transform:
   m_Father: {fileID: 1329253169}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &201171175
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201171168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.74
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &384962515
 GameObject:
   m_ObjectHideFlags: 0
