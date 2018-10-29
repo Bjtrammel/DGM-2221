@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 70594711}
   m_Layer: 0
   m_Name: Mario
-  m_TagString: Untagged
+  m_TagString: Mario
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 908913804}
-  - {fileID: 1835626730}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -486,7 +485,7 @@ GameObject:
   - component: {fileID: 201171171}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -806,52 +805,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &683703359
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 70594710}
-    m_Modifications:
-    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1316005249978142, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-      propertyPath: m_Name
-      value: Gun
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6a966fdd5c2f66f4a91c2c0d686c7904, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &872606237
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +819,7 @@ GameObject:
   m_Layer: 0
   m_Name: Plane (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1238,7 +1191,7 @@ GameObject:
   - component: {fileID: 1217137722}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1394,8 +1347,8 @@ GameObject:
   - component: {fileID: 1329253172}
   m_Layer: 0
   m_Name: Goomba
-  m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1439,11 +1392,6 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!4 &1835626730 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4843046944575738, guid: 6a966fdd5c2f66f4a91c2c0d686c7904,
-    type: 2}
-  m_PrefabInternal: {fileID: 683703359}
 --- !u!1 &1959715761
 GameObject:
   m_ObjectHideFlags: 0
