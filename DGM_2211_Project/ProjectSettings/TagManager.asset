@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Mario
+  - Project
   - Enemy
-  - Bullet
-  - breakable
   layers:
   - Default
   - TransparentFX
@@ -18,7 +16,7 @@ TagManager:
   - 
   - 
   - Ground
-  - Projectile
+  - Project
   - Enemy
   - Player IFrames
   - 
